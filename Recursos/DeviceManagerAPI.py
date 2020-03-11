@@ -86,19 +86,27 @@ class DeviceManager:
         # como parametro na hora de criar o objeto
         # da class DeviceManager
         # por agora vai na gambiarra
+
+        # creates the folder to store the output files
+        # New feature to add later //TODO
+        # pass the name of the output folder
+        # as parameter when creating the object
+        # of the DeviceManager class
+        # for now go to the gambiarra
         if diretorio_saida:
             self.time_stamp = diretorio_saida
         else:
             self.time_stamp = time.strftime("%d-%m-%Y_%H:%M:%S")
-            
+        
+        #directory with time stamp for what?
         os.mkdir(self.time_stamp)
 
     def get_devices(self):
         # conexão com a database
-
+        #connection to the database
         devices = []
-
         # seleção dos dispositivos que fazem parte do cenário e estão ativos
+        # select devices that are part of scenario and are active
         self.cur.execute(
             'SELECT * FROM containers WHERE nome_cenario = :nome AND estado_container = :estado AND is_server = 0 OR is_server = 3',
             {'nome': self.nome_cenario, 'estado': 'EXECUTING'}
