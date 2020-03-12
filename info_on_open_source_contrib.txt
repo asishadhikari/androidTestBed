@@ -1,0 +1,14 @@
+- How to configure a remote that points to the upstream(original repo):
+	https://help.github.com/en/articles/configuring-a-remote-for-a-fork
+- How to sync fork with upstream repo:
+	https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork
+
+- How to merge changes from upstream/master into local master
+	git fetch upstream
+	git checkout master
+	git merge upstream/master
+	commit
+	git push origin master
+
+- Delete a remote branch
+	git push origin --delete BRANCH_NAME
