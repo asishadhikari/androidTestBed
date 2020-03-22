@@ -15,9 +15,10 @@ from .gerente import Gerente
 class Criador:
 
     def __init__(self):
+        #manager instance
         self.gerente = Gerente()
         # conexão com o docker, utilize o comando 'docker version' e descubra a versão da API do servidor
-        self.client = docker.from_env(version='1.26')
+        self.client = docker.from_env(version='1.40')
         # conexao com o sqlite
         self.conn = sqlite3.connect('DB/mydb.db')
         # criacao do cursor
