@@ -11,7 +11,7 @@ from Recursos.class_container import Container
 
 from .gerente import Gerente
 
-
+#Class creator
 class Criador:
 
     def __init__(self):

@@ -29,3 +29,6 @@ sudo usermod -aG docker $USER
 docker pull renanalves/android-testbed
 docker pull renanalves/server-testbed
 
+#get the required python packages
+pip3 install -r requirements.txt
+

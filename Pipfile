@@ -1,0 +1,15 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pytest = "*"
+
+[packages]
+docker = "*"
+texttable = "*"
+python-nginx = "*"
+
+[requires]
+python_version = "3.6"
