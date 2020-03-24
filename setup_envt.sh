@@ -28,7 +28,7 @@ sudo usermod -aG docker $USER
 #get docker images for client and server containers
 docker pull renanalves/android-testbed
 docker pull renanalves/server-testbed
-
+docker pull nginx
 #get the required python packages
 pip3 install -r requirements.txt
 

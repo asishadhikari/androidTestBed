@@ -28,6 +28,7 @@ class Android:
 
     def exec_run(self, action, ip_cloudlet, argumentos, repeticoes):
         # limpa o logcat para remover resultados de experimentos anteriores
+        #clears the logcat to remove results from previous experiments
         os.system(comandos.CLEAR_LOG % self.console)
 
         num_interacoes = 1

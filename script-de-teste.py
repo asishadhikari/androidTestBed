@@ -8,12 +8,12 @@ from Recursos.DeviceManagerAPI import DeviceManager
 
 # instancia a classe da API passando o nome do cenario e o ip da cloudlet
 # instantiate an API class wihle passing name of the scenario and cloudlet IP addr
-DM = DeviceManager("teste", "192.168.1.10")
+DM = DeviceManager("teste", "172.17.0.")
 
 # guarda os dispositivos do cénario em uma variavel
 # store's the scenario's devices in a variable
 dispositivos = DM.get_devices()
-
+print(str(len(dispositivos))+ "Devices found \n")
 # inicia a app desejada nos dispositivos
 # launches the desired app on devices
 for android in dispositivos:
